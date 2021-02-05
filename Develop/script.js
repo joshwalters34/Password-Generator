@@ -21,15 +21,18 @@ document.getElementById("generate").addEventListener("click", charUpperCase);
 document.getElementById("generate").addEventListener("click", charNumber);
 document.getElementById("generate").addEventListener("click", charSpecial);
 
-//button.addEventListener("click", charLength);
 
 function charLength () {
-  window.prompt ("Choose a length between 8 and 16 characters.");
-  var characterLength = document.getElementById("characterLength").value;
-  if (characterLength <8) {
-    alert ("Password must contain at least 8 characters.")
-    window.prompt ("Choose a password length between 8 and 16 characters.")
-  }
+  var userEntry = prompt("Choose a password length between 8 and 128 characters.");
+  if (userEntry < 8 || userEntry > 128 || userEntry != 'number') 
+ {
+    alert ("Password must be between 8 and 128 characters.");
+    window.prompt ("Choose a password length between 8 and 128 characters.");
+  } //else if 
+  //(typeof userEntry !== 'number') {
+   // alert ("Entry must be a number.");
+    //window.prompt ("Choose a password length between 8 and 16 characters.");
+  //}
 }
 
 
