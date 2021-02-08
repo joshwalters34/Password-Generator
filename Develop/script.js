@@ -20,12 +20,7 @@ var button = document.getElementById("generate");
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// these get the prompts for the user
-// document.getElementById("generate").addEventListener("click", charLength);
-// document.getElementById("generate").addEventListener("click", charLowerCase);
-// document.getElementById("generate").addEventListener("click", charUpperCase);
-// document.getElementById("generate").addEventListener("click", charNumber);
-// document.getElementById("generate").addEventListener("click", charSpecial);
+
 
 var arrLength = [];
 var arrLower = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
@@ -117,3 +112,10 @@ function writePassword() {
 //var charUpperCase = window.prompt ("Include an uppercase character in your password?");
 //var charSpecial = window.prompt ("Include a special character in your password?");
 //var charNumber = window.prompt ("Include a number in your password?");
+
+// these get the prompts for the user
+// document.getElementById("generate").addEventListener("click", charLength);
+// document.getElementById("generate").addEventListener("click", charLowerCase);
+// document.getElementById("generate").addEventListener("click", charUpperCase);
+// document.getElementById("generate").addEventListener("click", charNumber);
+// document.getElementById("generate").addEventListener("click", charSpecial);
