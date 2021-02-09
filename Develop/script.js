@@ -5,8 +5,13 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
+  if(password){
+     passwordText.value = password;
+      }
+   else{
+         passwordText.value = "No password generated";
+   }
 }
 
 // pull random values from array
@@ -36,12 +41,13 @@ function generatePassword() {
   var userValues = [];
 
   var charLength = prompt("Choose a password length between 8 and 128 characters.");
-     if (charLength < 8 || charLength > 128 || !Number.isInteger(charLength)) {
+     if (charLength < 8 || charLength > 128 ) {
       alert ("Password must be between 8 and 128 characters.");
-      // var noPassword = document.getElementById ("password");
-      // password.placeholder = 
-      document.getElementById("password").value = "no password";
-      document.getElementById("password").placeholder = "No password generated";
+      return;
+     }
+
+     if (isNaN(charLength)) {
+      alert ("Password must be between 8 and 128 characters.");
       return;
      }
 
