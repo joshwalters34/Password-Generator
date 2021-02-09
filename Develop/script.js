@@ -36,8 +36,11 @@ function generatePassword() {
   var userValues = [];
 
   var charLength = prompt("Choose a password length between 8 and 128 characters.");
-     if (charLength < 8 || charLength > 128) {
+     if (charLength < 8 || charLength > 128 || !Number.isInteger(charLength)) {
       alert ("Password must be between 8 and 128 characters.");
+      // var noPassword = document.getElementById ("password");
+      // password.placeholder = 
+      document.getElementById("password").value = "no password";
       document.getElementById("password").placeholder = "No password generated";
       return;
      }
