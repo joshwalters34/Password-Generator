@@ -7,11 +7,13 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
+// pull random values from array
 function passDisplay(arr) {
-  return arr[Math.floor(Math.random() * passDisplay.length)];
+//  return arr[Math.floor(Math.random() *arr.length)];
+  var generatedPass = Math.floor(Math.random() *arr.length);
+  return arr[generatedPass]
 }
 
 var button = document.getElementById("generate");
@@ -28,22 +30,22 @@ var arrUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
 var arrNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var arrSpecial = ["!", "@", "#", "$", "%", "&", "*"];
 
-function writePassword() {
+function generatePassword() {
   var userValues = [];
 
-  let lengthInput = prompt ("Choose a password length between 8 and 128 characters.");
-  arrLength.push(lengthInput);
+  // let lengthInput = prompt ("Choose a password length between 8 and 128 characters.");
+  // arrLength.push(lengthInput);
 
   // function length () 
-  // var charLength = prompt("Choose a password length between 8 and 128 characters.");
-     if (lengthInput >= 8 || lengthInput <= 128) {
-       userValues.push(lengthInput);
-
-     } else if (charLength < 8 || charLength > 128) {
-       alert ("Password must be between 8 and 128 characters.");
-       window.prompt ("Choose a password length between 8 and 128 characters.");
-     
-  }
+  var charLength = prompt("Choose a password length between 8 and 128 characters.");
+     if (charLength < 8 || charLength > 128) {
+      alert ("Password must be between 8 and 128 characters.");
+      return;
+     }
+      else {
+        // not needed
+      //  userValues.push(charLength);
+     } 
 
   var charLower = confirm("Include a lowercase letter in your password?");
     if (charLower) {
@@ -70,12 +72,16 @@ function writePassword() {
       return;
     }
     console.log(userValues);
+    
+    var stringPassword = "";
 
-    for (var i = 0; i < lengthInput.length; i++) {
+    for (var i = 0; i < charLength; i++) {
       var passValue = passDisplay(userValues);
-      var singleCharacter = passDisplay(passValue);
-      password[i].src = singleCharacter;
+      var finalValue = passDisplay(passValue);
+      stringPassword = stringPassword + finalValue;
     }
+
+    return stringPassword;
   }
 // function charLength () {
 //   var userEntry = prompt("Choose a password length between 8 and 128 characters.");
