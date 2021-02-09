@@ -4,3 +4,15 @@ This website is designed to give a user the ability to create a unique password.
 ## Motivation
 My motivation for this website was to design something simple and easy to allow users to generate a password.  Strong passwords are vital to ensure that your data is kept secure and doesn't fall into the wrong hands.  
 
+
+### Image of my website
+
+View an image of my [Website](Assets/webpage_screenshot.png)
+
+### Website Address
+
+Visit my [Website](https://joshwalters34.github.io/Password-Generator/)
+
+### Repository
+
+View my [GitHub_Repository](https://github.com/joshwalters34/Password-Generator)
