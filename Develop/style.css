@@ -75,7 +75,7 @@ header {
 .btn {
   border: none;
   background-color: rgb(30, 14, 243);
-  border-radius: 25px;
+  border-radius: 25px; 
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
   color: hsl(0, 0%, 100%);
@@ -87,6 +87,11 @@ header {
   text-align: center;
   cursor: pointer;
 }
+
+button:focus {
+  border-radius: 0px;
+}
+
 
 button[disabled] {
   cursor: default;
